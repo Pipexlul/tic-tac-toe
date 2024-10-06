@@ -9,5 +9,6 @@ typedef struct board_s {
 
 board_t *board_create();
 void board_init(board_t *board);
+void board_destroy(board_t *board);
 
 #endif //BOARD_H

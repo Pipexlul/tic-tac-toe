@@ -15,3 +15,11 @@ void board_init(board_t *board) {
         }
     }
 }
+
+void board_destroy(board_t *board) {
+    if (!board) {
+        return;
+    }
+
+    free(board);
+}

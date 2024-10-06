@@ -14,3 +14,16 @@ void game_init(game_t *game) {
     board_init(game->board);
 }
 
+void game_destroy(game_t *game) {
+    if (!game) {
+        return;
+    }
+
+    if (game->board != NULL) {
+        board_destroy(game->board);
+        game->board = NULL;
+    }
+
+    free(game);
+}
+
